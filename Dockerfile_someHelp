@@ -22,6 +22,9 @@ docker ps -a
 Запуск контейнера в консоли:
 docker run -it 13bcb7e0ad0b
 
+Войти в контейнер:
+docker exec -it container_name /bin/sh
+
 TEST
 FROM alpine:3.13
 ENV UID=991 GID=991
