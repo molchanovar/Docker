@@ -1,5 +1,4 @@
-``` docker
-
+``` dockerfile
 FROM ubuntu:18.04
 COPY . /app
 RUN make /app
