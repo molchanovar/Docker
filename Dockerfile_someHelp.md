@@ -1,9 +1,20 @@
 Docker Install (Ubuntu/ or Debian like): 
+
+1) Обновляемся: 
 ```
-sudo apt update && sudo apt upgrade - обновляемся 
+sudo apt update && sudo apt upgrade - 
+```
+
+2) Ставим пакеты, необходимые для работы apt по https: 
+```
 sudo apt install apt-transport-https ca-certificates curl software-properties-common - ставим пакеты, необходимые для работы apt по https
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - устанавливка программу из официального репозитория разработчиков (+ ключ репозитория)
 ```
+
+3) Устанавлка из официального репозитория разработчиков (с добавлением ключа репозитория):
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add
+```
+
 
 Usefull Commands:
 
