@@ -1,5 +1,3 @@
-# vim:syntax=Dockerfile
-
 Docker Install (Ubuntu/ or Debian like): 
 ```
 sudo apt update && sudo apt upgrade - обновляемся 
