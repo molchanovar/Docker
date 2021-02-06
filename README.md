@@ -2,17 +2,26 @@
 
 ### Docker, docker-compose, dockerfile
 
-Cобран кастомный образ nginx на базе alpine. После запуска nginx отдает кастомную страницу (из файла **index.html**)
+Cобран кастомный образ nginx на базе alpine (описание в **Dockerfile**). После запуска nginx отдает кастомную страницу (из файла **index.html**)
 Конфигурация nginx - **nginx.conf** 
 
 Файлы копируются в контейнер при сборке.  
 
+#### Сборка образа и запуск контейнера: 
+~~~
+docker build -t <Имя_Образа> .  - распаковать и собрать DockerImage (файлы: Dockerfile  index.html  nginx.conf)
+docker run -it  <Имя_Образа>  - запуск контейнера (порт любой, в примере 8081)
+
+docker build -f Dockerfile -t my-server .
+docker run -it -p 1234:80 my-server
+http://localhost:1234/
+~~~
+
 
 #### Разница контейнер/образ: 
-Контейнеры создаются из образов.
-
-**Образ** - описание параметров. **Контейнер** - окружение в котором крутится приложение 
-
+Контейнеры создаются из образов с помощью команды `docker run`.
+Команда `docker run` берет Docker образ в качестве темплейта и создает из него контейнер, который и запускается.
+Образы создаются из Dockerfile с помощью команды `docker build`.
 
 #### Сборка ядра в контейнере: 
 Возможна. 
@@ -48,14 +57,3 @@ sudo apt install -y docker-ce
 ```
 sudo usermod -aG docker $(whoami)
 ```
-
-
-#### Сборка образа и запуск контейнера: 
-~~~
-docker build -t <Имя_Образа> .  - распаковать и собрать DockerImage (файлы: Dockerfile  index.html  nginx.conf)
-docker run -it  <Имя_Образа>  - запуск контейнера (порт любой, в примере 8081)
-
-docker build -f Dockerfile -t my-server .
-docker run -it -p 1234:80 my-server
-http://localhost:1234/
-~~~
