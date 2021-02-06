@@ -23,6 +23,10 @@ sudo apt update && apt-cache policy docker-ce
 sudo apt install -y docker-ce
 ```
 
+5) Добавление user'a в группу docker (исправлет ошибку при подключении к сокету) 
+```
+sudo usermod -aG docker $(whoami)
+```
 
 Usefull Commands:
 
