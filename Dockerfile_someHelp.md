@@ -40,6 +40,13 @@ docker run -it -p 1234:80 nginx - Запуск контейнера с пере�
 docker exec -it container_name /bin/sh    - Войти в контейнер с окружением /bin/sh
 docker build -f Dockerfile -t my-server . - Собрать Image из Dockerfile и задать имя контейнера my-server 
 
+Создание образа и запуск контейнера: 
+~~~
+docker build -f Dockerfile -t my-server
+docker run -it -p 1234:80 my-server
+http://localhost:1234/
+~~~
+
 Simple example: 
 
 FROM ubuntu:18.04
