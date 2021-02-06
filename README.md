@@ -45,13 +45,10 @@ sudo usermod -aG docker $(whoami)
 
 #### Сборка образа и запуск контейнера: 
 ~~~
+docker build -t <Имя_Образа> .  - распаковать и собрать DockerImage (файлы: Dockerfile  index.html  nginx.conf)
+docker run -it  <Имя_Образа>  - запуск контейнера (порт любой, в примере 8081)
+
 docker build -f Dockerfile -t my-server
 docker run -it -p 1234:80 my-server
 http://localhost:1234/
 ~~~
-
-Cборка и запуск контейнера:
-```
-docker build -t <Имя_Образа> .  - распаковать и собрать DockerImage (файлы: Dockerfile  index.html  nginx.conf)
-docker run -it -p 8081:80 <Имя_Образа>  - запуск контейнера (порт любой, в примере 8081)
-```
