@@ -1,5 +1,12 @@
 # vim:syntax=Dockerfile
 
+Docker Install (Ubuntu/ or Debian like): 
+```
+sudo apt update && sudo apt upgrade - обновляемся 
+sudo apt install apt-transport-https ca-certificates curl software-properties-common - ставим пакеты, необходимые для работы apt по https
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - устанавливка программу из официального репозитория разработчиков (+ ключ репозитория)
+```
+
 Usefull Commands:
 
 docker search nginx   - Поиск образов в базе DockerHub
