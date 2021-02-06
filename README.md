@@ -18,7 +18,8 @@ Cобран кастомный образ nginx на базе alpine. После
 Возможна. 
 - [`Пример сборки ядра в контейнере`](https://github.com/a13xp0p0v/kernel-build-containers)
 
-#### Docker Install (Ubuntu/ or Debian like): 
+
+### Docker Install (Ubuntu/ or Debian like): 
 
 1) Обновляемся: 
 ```
