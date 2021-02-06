@@ -10,9 +10,10 @@ sudo apt update && sudo apt upgrade
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 ```
 
-3) Устанвка из официального репозитория разработчиков (с добавлением ключа репозитория):
+3) Установка из официального репозитория разработчиков (с добавлением ключа репозитория):
 ```
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add
+artem@Sony-PC:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+OK
 ```
 
 
