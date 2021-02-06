@@ -12,7 +12,7 @@ CMD specifies what command to run within the container.
 ```
 
 #### Usefull Commands:
-``` shell
+``` bash
 docker search nginx   - Поиск образов в базе DockerHub
 docker pull nginx     - скачать из репозитория 
 docker build .  - Сборка Docker файла расположенного локально: 
