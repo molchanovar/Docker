@@ -60,18 +60,16 @@ sudo usermod -aG docker $(whoami)
 
 
 ### Загрузка образа в DockerHub 
+
+Выбрать контейнер для загрузки: 
 ```
 docker ps -a
 CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS                     PORTS     NAMES
 8bcc1c073962   my-server   "nginx -g 'daemon of…"   18 seconds ago   Exited (0) 4 seconds ago             upbeat_satoshi
-
-docker commit 8bcc1c073962 first2container/nginx_on_alpine_1.00
-sha256:7a4300682a5854a036fc736b4426d43f1cf8ed33d8aa9f5693f417fe086af963
-
-docker push first2container/nginx_on_alpine_1.00
-
-docker login
-
+```
+Сохранить все измения и залить образ на DockerHub: 
+```
+docker commit 8bcc1c073962 first2container/nginx_on_alpine_1.00:latest
 docker push first2container/nginx_on_alpine_1.00
 ```
 
