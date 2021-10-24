@@ -7,7 +7,7 @@ Cобран кастомный образ nginx на базе alpine (описа
 
 Файлы копируются в контейнер при сборке.  
 
-#### Сборка образа и запуск контейнера: 
+#### Сборка образа и запуск контейнера (Usefull CMD): 
 ~~~
 docker build -t <Имя_Образа> .  - распаковать и собрать DockerImage (файлы: Dockerfile  index.html  nginx.conf)
 docker run -it  <Имя_Образа>  - запуск контейнера (порт любой, в примере 8081)
@@ -15,8 +15,9 @@ docker run -it  <Имя_Образа>  - запуск контейнера (по
 docker build -f Dockerfile -t my-server .
 docker run -it -p 1234:80 my-server
 http://localhost:1234/
-~~~
 
+docker run -d -p 9000:80 nginx  # Run in background mode
+~~~
 
 #### Разница контейнер/образ: 
 Контейнеры создаются из образов с помощью команды `docker run`.
