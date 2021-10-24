@@ -17,6 +17,10 @@ docker run -it -p 1234:80 my-server
 http://localhost:1234/
 
 docker run -d -p 9000:80 nginx  # Run in background mode
+
+docker ps -a   # See all containers 
+docker rm <container_name>  # Delete container
+docker rmi <image> (nginx)  # Delete image
 ~~~
 
 #### Разница контейнер/образ: 
