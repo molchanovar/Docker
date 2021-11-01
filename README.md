@@ -12,6 +12,10 @@ Cобран кастомный образ nginx на базе alpine (описа
 docker build -t <Имя_Образа> .  - распаковать и собрать DockerImage (файлы: Dockerfile  index.html  nginx.conf)
 docker run -it  <Имя_Образа>  - запуск контейнера (порт любой, в примере 8081)
 
+docker rm $(docker ps -a -f status=exited -q) - удалить все контейнеры
+docker exec -it <container_id> bash - зайти в контейнер (bash/sh)
+docker run -e "APP_COLOR=blue" -p 38282:8080 --name blue-app kodekloud/simple-webapp - Передана переменная, задан порт и имя
+
 docker build -f Dockerfile -t my-server .
 docker run -it -p 1234:80 my-server
 http://localhost:1234/
